@@ -1,0 +1,17 @@
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: aqua;
+    margin-top: 45px;
+}
+
+.listNav {
+    display: flex;
+    flex-direction: row;
+    gap: 57px
+}
