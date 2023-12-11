@@ -1,17 +1,30 @@
 * {
     text-decoration: none;
     list-style: none;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .header-container {
     display: flex;
-    justify-content: flex-end;
-    background-color: aqua;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: right;
+    font-style: normal;
+    color: #FF6060;
+    padding: 0 100px;
     margin-top: 45px;
+    margin-bottom: 50px;
 }
 
 .listNav {
     display: flex;
     flex-direction: row;
-    gap: 57px
+    gap: 57px;
+
+}
+
+.listNav li a {
+    color: #FF6060;
 }

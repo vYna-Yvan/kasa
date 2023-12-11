@@ -20,6 +20,7 @@ export default function Navigation() {
                 <Header />
 
 
+
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -27,6 +28,7 @@ export default function Navigation() {
 
 
                 </Routes >
+                <Footer />
             </div>
         </Router >
     );
