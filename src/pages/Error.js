@@ -1,8 +1,13 @@
 import React from 'react'
+import '../style/error.css'
 
 const Error = () => {
     return (
-        <div>404</div>
+        <div className='error_box'>
+            <h1 className='error'>404</h1>
+            <h2>Oups! La page que vous demandez n'existe pas.</h2>
+            <p>Retourner sur la page d’accueil</p>
+        </div>
     )
 }
 
