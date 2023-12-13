@@ -41,7 +41,11 @@
 }
 
 .main-content {
-    height: 829px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
     /* height temporaire*/
     padding: 56px 50px;
     margin-bottom: 50px;
