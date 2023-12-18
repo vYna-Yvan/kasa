@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     return (
         <div className='home-container'>
-            <div className='text-img'><img src={mainImage}>
-            </img>
+            <div className='text-img'><img alt='sea' src={mainImage} />
+
                 <h1 className='title_home'>Chez vous, partout et ailleurs</h1>
             </div>
             <div className='main-content'>
-                {apiData.map(data => (<div style={{ width: '32%', height: 200, marginBottom: 20, backgroundImage: `url(${data.cover})` }}><Link to={`/logement/${data.id}`}>{data.title}</Link></div>))}
+                {apiData.map(data => (<div className='home_card' style={{ backgroundImage: `url(${data.cover})` }}><Link className='card_title' to={`/logement/${data.id}`}>{data.title}</Link></div>))}
 
             </div>
         </div>

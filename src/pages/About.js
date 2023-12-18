@@ -5,17 +5,17 @@ import arrow from '../assets/icone/arrow_back_ios-24px 2.svg'
 import Dropdown from '../components/dropdown/Dropdown'
 
 const dropdownData = [
-    { title: 'Flabalité', description: 'description flabilité' },
-    { title: 'Respect', description: 'description respect' },
-    { title: 'Service', description: 'description service' },
-    { title: 'Sécurité', description: 'description sécurité' }
+    { title: 'Flabalité', description: 'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vértifiées par nos eéquipes.' },
+    { title: 'Respect', description: 'La bienveillance fait partie des valeurs fondatrice de Kasa. Tout comportement discriminatoire ou de pertubation de voidsinage entraînera une exclusion de plateforme.' },
+    { title: 'Service', description: 'La bienveillance fait partie des valeurs fondatrice de Kasa. Tout comportement discriminatoire ou de pertubation de voidsinage entraînera une exclusion de plateforme.' },
+    { title: 'Sécurité', description: `La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note à l'hôtes qu'au locataire, cela permet à nos équipes de vérifier que les standars sont bien respectés. Nous organisons également des ateliers sur la sécurité domistique pour nos hôtes. ` }
 ]
 
 const About = () => {
     return (
         <div className='about_container'>
             <div className='img_box'>
-                <img src={Aboutimg} alt='forest-montain' ></img>
+                <img src={Aboutimg} alt='forest-montain' />
             </div>
             <div className='dropdown_box'>
                 {dropdownData.map(data => (<Dropdown data={data} type='string' />))}

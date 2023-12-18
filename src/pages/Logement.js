@@ -13,7 +13,7 @@ const Logement = () => {
 
     const [loading, setLoading] = useState(true)
     const [logement, setLogement] = useState(null)
-    const [carouselIdex, setCarouselIndex] = useState(0)
+    const [carouselIndex, setCarouselIndex] = useState(0)
     const [stars, setStars] = useState([])
     useEffect(() => {
         const index = apiData.findIndex(item => item.id === id)
@@ -38,8 +38,11 @@ const Logement = () => {
             setLoading(false)
         }
     }, [])
+
+
+
     const incrementIndex = () => {
-        const newIndex = carouselIdex + 1
+        const newIndex = carouselIndex + 1
         if (newIndex >= logement.pictures.length) {
             setCarouselIndex(0)
         } else {
@@ -48,7 +51,7 @@ const Logement = () => {
     }
 
     const decrementtIndex = () => {
-        const newIndex = carouselIdex - 1
+        const newIndex = carouselIndex - 1
         if (newIndex < 0) {
             setCarouselIndex(logement.pictures.length)
         } else {
@@ -57,25 +60,27 @@ const Logement = () => {
     }
     return (
         loading ? <div>loading...</div> :
-            <div >
+            <div className='logement_container'>
                 <div className='img_cover'>
                     <div className='left_arrow' ><img onClick={decrementtIndex} alt='précédent' src={left_arrow} /></div>
-                    <img className='logement_img' alt={logement.title} src={logement.pictures[carouselIdex]}></img>
+                    <img className='logement_img' alt={logement.title} src={logement.pictures[carouselIndex]}></img>
+                    <p className='carousel_number'>{carouselIndex + 1}/{logement.pictures.length}</p>
                     <div className='right_arrow' ><img onClick={incrementIndex} alt='Suivant' src={right_arrow} /></div>
                 </div>
+
                 <div className='logement_info_container'>
-                    <div>
-                        <div>{logement.title}</div>
-                        <div>{logement.location}</div>
-                        <div>{logement.tags.map(tag => (<div>{tag}</div>))}</div>
+                    <div className='info_box'>
+                        <div className='logement_title'>{logement.title}</div>
+                        <div className='logement_location' >{logement.location}</div>
+                        <div className='logement_tags'>{logement.tags.map(tag => (<div>{tag}</div>))}</div>
                         <Dropdown data={{ title: 'Description', description: logement.description }} type='string' />
                     </div>
-                    <div>
-                        <div>
+                    <div className='info_box'>
+                        <div className='host_info'>
                             <div>{logement.host.name}</div>
                             <img alt={logement.host.name} src={logement.host.picture}></img>
                         </div>
-                        <div>
+                        <div className='rating'>
                             {stars.map((star, i) => (<img key={i} alt={star} src={star === 'active' ? star_active : star_inactive} />))}
                         </div>
                         <Dropdown data={{ title: 'Equipements', description: logement.equipments }} type='array' />

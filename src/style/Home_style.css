@@ -50,3 +50,19 @@
     padding: 56px 50px;
     margin-bottom: 50px;
 }
+
+.home_card {
+    position: relative;
+    width: 22%;
+    height: 340px;
+    margin-bottom: 40px;
+
+}
+
+.card_title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.125em;
+}
