@@ -55,7 +55,11 @@
     position: relative;
     width: 22%;
     height: 340px;
+    border-radius: 10px;
     margin-bottom: 40px;
+
+
+
 
 }
 
@@ -63,6 +67,6 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
-    color: #fff;
+    color: var(--text-color);
     font-size: 1.125em;
 }
