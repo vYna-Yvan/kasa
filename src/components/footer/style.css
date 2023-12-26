@@ -24,3 +24,12 @@ footer {
     margin: 0;
     color: var(--text-color);
 }
+
+@media screen and (max-width: 767px) {
+   
+
+    .footer_text {
+        font-size: 0.75em;
+    }
+    
+}

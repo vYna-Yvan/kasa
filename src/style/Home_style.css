@@ -70,3 +70,29 @@
     color: var(--text-color);
     font-size: 1.125em;
 }
+
+@media screen and (max-width: 767px) {
+    .home-container {
+        margin-top: 27px;
+        padding: 0 20px;
+    }
+    .text-img {
+        height: 111px;
+        margin-bottom: 22px;
+    }
+    .title_home {
+        font-size: 1.5em;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 27px;
+        
+    }
+    
+    .home_card {
+        width: 100%;
+        margin-bottom:20px ;
+    }
+}

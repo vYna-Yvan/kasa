@@ -57,3 +57,20 @@
     height: auto;
     margin: 0;
 }
+
+@media screen and (max-width:767px) {
+    
+    .about_container {
+        padding: 0 20px;
+    }
+
+    .img_box {
+        margin: 20px 0;
+    }
+
+    .dropdown_box {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+}

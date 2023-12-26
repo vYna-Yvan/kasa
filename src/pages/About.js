@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style/About.css'
 import Aboutimg from '../assets/image/About-image.jpeg'
-import arrow from '../assets/icone/arrow_back_ios-24px 2.svg'
+
 import Dropdown from '../components/dropdown/Dropdown'
 
 const dropdownData = [

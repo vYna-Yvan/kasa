@@ -37,7 +37,7 @@ const Logement = () => {
             setLogement(apiData[index])
             setLoading(false)
         }
-    }, [])
+    }, [id])
 
 
 
@@ -69,13 +69,13 @@ const Logement = () => {
                 </div>
 
                 <div className='logement_info_container'>
-                    <div className='info_box'>
+                    <div className='logement_info_box'>
                         <div className='logement_title'>{logement.title}</div>
                         <div className='logement_location' >{logement.location}</div>
                         <div className='logement_tags'>{logement.tags.map(tag => (<div>{tag}</div>))}</div>
-                        <Dropdown data={{ title: 'Description', description: logement.description }} type='string' />
+                       
                     </div>
-                    <div className='info_box'>
+                    <div className='host_info_box'>
                         <div className='host_info'>
                             <div>{logement.host.name}</div>
                             <img alt={logement.host.name} src={logement.host.picture}></img>
@@ -83,10 +83,13 @@ const Logement = () => {
                         <div className='rating'>
                             {stars.map((star, i) => (<img key={i} alt={star} src={star === 'active' ? star_active : star_inactive} />))}
                         </div>
-                        <Dropdown data={{ title: 'Equipements', description: logement.equipments }} type='array' />
                     </div>
+                  
                 </div>
-
+                <div className='logement_des'>
+                        <Dropdown data={{ title: 'Description', description: logement.description }} type='string' />
+                        <Dropdown data={{ title: 'Equipements', description: logement.equipments }} type='array' />
+                        </div>
             </div >
     )
 }

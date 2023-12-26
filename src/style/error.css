@@ -32,3 +32,22 @@
     margin-bottom: 139px;
     border-bottom: var(--main-color) 1px solid;
 }
+
+@media screen and (max-width: 767px) {
+    .error_box {
+        padding: 0 20px;
+    }
+    .error {
+        font-size: 6em;
+        margin: 133px 0;
+    }
+    .error_box h2 {
+       font-size: 1.25em; 
+       margin-bottom: 133px;
+       text-align: center;
+    }
+    .error_box p {
+        margin-bottom: 133px;
+        text-align: center;
+    }
+}
