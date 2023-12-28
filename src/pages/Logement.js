@@ -72,7 +72,7 @@ const Logement = () => {
                     <div className='logement_info_box'>
                         <div className='logement_title'>{logement.title}</div>
                         <div className='logement_location' >{logement.location}</div>
-                        <div className='logement_tags'>{logement.tags.map(tag => (<div>{tag}</div>))}</div>
+                        <div className='logement_tags'>{logement.tags.map((tag, i) => (<div key={i}  >{tag}</div>))}</div>
                        
                     </div>
                     <div className='host_info_box'>
