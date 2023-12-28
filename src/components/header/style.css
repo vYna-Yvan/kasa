@@ -32,12 +32,15 @@
 @media screen and (max-width: 767px) {
 
     .header-container {
-        
         padding: 0 20px;
-        margin-top: 20px;
+        margin-top: 20px; 
+    }
+    .header-container img {
+        height: 50px;
     }
     .listNav {
-        gap: 26px;
+        gap: 20px;
+        padding: 0;
     }
 
     .listNav li a {
