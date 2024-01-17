@@ -16,11 +16,11 @@ import About from "../pages/About";
 export default function Navigation() {
     return (
         <Router>
-            <div>
+            
                 <Header />
 
 
-
+                <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -30,8 +30,10 @@ export default function Navigation() {
 
 
                 </Routes >
+                </main>
+                
                 <Footer />
-            </div>
+            
         </Router >
     );
 }

@@ -14,7 +14,10 @@
     font-style: normal;
     color: #FF6060;
     padding: 0 100px;
-    margin-top: 45px;
+   
+   
+    height: 100px;
+    box-sizing: border-box;
 
 }
 

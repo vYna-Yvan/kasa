@@ -10,6 +10,7 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: black;
+
 }
 
 .footer_box {
@@ -18,6 +19,7 @@ footer {
     justify-content: center;
     height: 209px;
     gap: 29px;
+    
 }
 
 .footer_text {
