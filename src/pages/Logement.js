@@ -12,7 +12,7 @@ const Logement = () => {
     const { id } = useParams()
 
     const [loading, setLoading] = useState(true)
-    const [logement, setLogement] = useState(null)
+    const [logement, setLogement] = useState(null) 
     const [carouselIndex, setCarouselIndex] = useState(0)
     const [stars, setStars] = useState([])
     useEffect(() => {
@@ -50,7 +50,7 @@ const Logement = () => {
         }
     }
 
-    const decrementtIndex = () => {
+    const decrementIndex = () => {
         const newIndex = carouselIndex - 1
         if (newIndex < 0) {
             setCarouselIndex(logement.pictures.length)
@@ -58,14 +58,16 @@ const Logement = () => {
             setCarouselIndex(newIndex)
         }
     }
+   
+
     return (
         loading ? <div>loading...</div> :
             <div className='logement_container'>
                 <div className='img_cover'>
-                    <div className='left_arrow' ><img onClick={decrementtIndex} alt='précédent' src={left_arrow} /></div>
+                    {logement.pictures.length > 1 ? (<div className='left_arrow' ><img onClick={decrementIndex} alt='précédent' src={left_arrow} /></div>) : null}
                     <img className='logement_img' alt={logement.title} src={logement.pictures[carouselIndex]}></img>
-                    <p className='carousel_number'>{carouselIndex + 1}/{logement.pictures.length}</p>
-                    <div className='right_arrow' ><img onClick={incrementIndex} alt='Suivant' src={right_arrow} /></div>
+                    {logement.pictures.length > 1 ? (<p className='carousel_number'>  {carouselIndex + 1}/{logement.pictures.length}</p>) : null}
+                    {logement.pictures.length > 1 ? (<div className='right_arrow' ><img onClick={incrementIndex} alt='Suivant' src={right_arrow} /></div>) : null}
                 </div>
 
                 <div className='logement_info_container'>
