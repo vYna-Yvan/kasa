@@ -23,3 +23,10 @@ main {
   min-height: calc(100vh - 344px);
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 767px) {
+  main {
+    min-height: calc(100vh - 291px);
+    box-sizing: border-box;
+  }
+}

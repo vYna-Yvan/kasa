@@ -13,9 +13,9 @@ const Dropdown = (props) => {
         <div>
             <div className='dropdown'>
                 <p>{title}</p>
-                <img onClick={onToggleDescription} alt='arrow' className='arrow' src={toggleDescription ? arrowDown : arrow} ></img>
+                <img onClick={onToggleDescription} alt='arrow' className={`arrow ${toggleDescription ? 'rotate' : ''}`} src={arrow} ></img>
             </div>
-            {toggleDescription && <div className='description' >{type === 'string' ? <p>{description}</p> : description.map((des, i)  => <div key={i} >{des}</div>)}</div>}
+            {toggleDescription && <div className={`DropContent ${arrow ? 'fade-in' : 'fade-out'}`}>{type === 'string' ? <p>{description}</p> : description.map((des, i)  => <div key={i} >{des}</div>)}</div>}
         </div>
 
     )

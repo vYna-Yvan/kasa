@@ -122,9 +122,11 @@
 }
 
 .logement_des div {
-    width: 100%;
+    width: 95%;
 }
-
+.logement_des div p{
+    margin: 0;
+}
 .text_dropdown {
     width: 50%;
 }
@@ -169,8 +171,11 @@
    .logement_des {
     display: flex;
     flex-direction: column;
-    width: 94%;
+    width: 99%;
     gap: 20px;
    }
+   .logement_des div {
+    width: 98%;
+}
    
 }
