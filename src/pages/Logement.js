@@ -7,11 +7,12 @@ import right_arrow from '../assets/icone/Right_arrow.svg'
 import star_active from '../assets/icone/star-active.svg'
 import star_inactive from '../assets/icone/star-inactive.svg'
 import Dropdown from '../components/dropdown/Dropdown'
+import Error from "../pages/Error";
 
 const Logement = () => {
     const { id } = useParams()
 
-    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(true)
     const [logement, setLogement] = useState(null) 
     const [carouselIndex, setCarouselIndex] = useState(0)
     const [stars, setStars] = useState([])
@@ -35,7 +36,7 @@ const Logement = () => {
             setStars(starArray)
 
             setLogement(apiData[index])
-            setLoading(false)
+            setError(false)
         }
     }, [id])
 
@@ -61,7 +62,7 @@ const Logement = () => {
    
 
     return (
-        loading ? <div>loading...</div> :
+        error ? <div>{<Error />}</div> :
             <div className='logement_container'>
                 <div className='img_cover'>
                     {logement.pictures.length > 1 ? (<div className='left_arrow' ><img onClick={decrementIndex} alt='précédent' src={left_arrow} /></div>) : null}
@@ -72,7 +73,7 @@ const Logement = () => {
 
                 <div className='logement_info_container'>
                     <div className='logement_info_box'>
-                        <div className='logement_title'>{logement.title}</div>
+                        <h1 className='logement_title'>{logement.title}</h1>
                         <div className='logement_location' >{logement.location}</div>
                         <div className='logement_tags'>{logement.tags.map((tag, i) => (<div key={i}  >{tag}</div>))}</div>
                        
@@ -83,7 +84,7 @@ const Logement = () => {
                             <img alt={logement.host.name} src={logement.host.picture}></img>
                         </div>
                         <div className='rating'>
-                            {stars.map((star, i) => (<img key={i} alt={star} src={star === 'active' ? star_active : star_inactive} />))}
+                            {stars.map((star, i) => (<img className='stars' key={i} alt={star} src={star === 'active' ? star_active : star_inactive} />))}
                         </div>
                     </div>
                   

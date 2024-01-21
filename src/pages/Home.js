@@ -13,7 +13,7 @@ const Home = () => {
                 <h1 className='title_home'>Chez vous, partout et ailleurs</h1>
             </div>
             <div className='main-content'>
-                {apiData.map(data => (<div className='home_card' key={data.id} style={{ backgroundImage: `url(${data.cover})` }}><Link className='card_title' to={`/logement/${data.id}`}>{data.title}</Link></div>))}
+                {apiData.map(data => (<Link  to={`/logement/${data.id}`}><div className='home_card' key={data.id} style={{ backgroundImage: `url(${data.cover})` }}><h2 className='card_title'>{data.title}</h2></div></Link>))}
 
             </div>
         </div>
