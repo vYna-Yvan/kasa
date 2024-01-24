@@ -43,27 +43,24 @@
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    flex: 2 100%;
-    gap: 50px 60px;
+    justify-content: space-between;
+    
     /* height temporaire*/
     padding: 50px 50px;
     border-radius: 25px;
     margin-bottom: 50px;
     background-color: #F6F6F6;
+    box-sizing: border-box;
 }
 .main-content a  {
-    flex: 1 30%;
-    position: relative;
-    width: 22%;
-    height: 340px;
-    border-radius: 10px;
-    background-size: cover;
+    margin-bottom: 50px;
+   
 }
 
 .home_card {
-    flex: 1 30%;
+    
     position: relative;
-    width: 100%;
+    width: 340px;
     height: 340px;
     border-radius: 10px;
     background-size: cover;
@@ -78,45 +75,9 @@
     font-size: 1.125em;
 }
 
-@media screen and (max-width : 1500px) {
-    .home-container {
-        padding: 0 50px;
-    }
-    .main-content {
-        flex: 2 100%;
-        
-    }
-    .main-content a {
-        flex: 1 25%;
-    }
-   
 
-}
 
-@media screen and (max-width : 1400px) {
-    .home-container {
-        padding: 0 50px;
-    }
-    .main-content {
-        flex: 2 100%;
-        
-    }
-    .home_card {
-        flex: 1 25%;
-    }
 
-}
-
-@media screen and (max-width : 1200px) {
-    .home-container {
-        padding: 0 25px;
-    }
-    .main-content {
-        padding: 25px 25px ;
-        gap: 25px 30px;
-    }
-
-}
 
 @media screen and (max-width: 767px) {
     .home-container {

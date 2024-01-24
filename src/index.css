@@ -4,7 +4,9 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -19,7 +21,7 @@ code {
 }
 
 main {
-  
+
   min-height: calc(100vh - 344px);
   box-sizing: border-box;
 }

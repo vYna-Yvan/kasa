@@ -19,7 +19,7 @@ footer {
     justify-content: center;
     height: 209px;
     gap: 29px;
-    
+
 }
 
 .footer_text {
@@ -28,10 +28,10 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-   
+
 
     .footer_text {
         font-size: 0.75em;
     }
-    
+
 }

@@ -1,44 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import apiData from '../api/api.json'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import '../style/Logement.css'
 import left_arrow from '../assets/icone/Left_arrow.svg'
 import right_arrow from '../assets/icone/Right_arrow.svg'
-import star_active from '../assets/icone/star-active.svg'
-import star_inactive from '../assets/icone/star-inactive.svg'
+
 import Dropdown from '../components/dropdown/Dropdown'
-import Error from "../pages/Error";
+
+import { Rating } from '../components'
 
 const Logement = () => {
     const { id } = useParams()
-
-    const [error, setError] = useState(true)
+    const navigate = useNavigate()
+    const [loading, setLoading] = useState(true)
     const [logement, setLogement] = useState(null) 
     const [carouselIndex, setCarouselIndex] = useState(0)
-    const [stars, setStars] = useState([])
+   
     useEffect(() => {
         const index = apiData.findIndex(item => item.id === id)
         console.log(index)
         if (index < 0) {
-
+            navigate('/404')
         } else {
-            let starArray = []
-            for (let i = 0; i < 5; i++) {
-                if (i < parseInt(apiData[index].rating)) {
-                    starArray.push('active')
-                } else {
-                    starArray.push('inactive')
-                }
-
-            }
-            console.log(apiData[index].rating)
-            console.log(starArray)
-            setStars(starArray)
+            
 
             setLogement(apiData[index])
-            setError(false)
+            setLoading(false)
         }
-    }, [id])
+    }, [id, navigate])
 
 
 
@@ -62,7 +51,7 @@ const Logement = () => {
    
 
     return (
-        error ? <div>{<Error />}</div> :
+       loading ? <div>loading ...</div> :
             <div className='logement_container'>
                 <div className='img_cover'>
                     {logement.pictures.length > 1 ? (<div className='left_arrow' ><img onClick={decrementIndex} alt='précédent' src={left_arrow} /></div>) : null}
@@ -83,18 +72,16 @@ const Logement = () => {
                             <div>{logement.host.name}</div>
                             <img alt={logement.host.name} src={logement.host.picture}></img>
                         </div>
-                        <div className='rating'>
-                            {stars.map((star, i) => (<img className='stars' key={i} alt={star} src={star === 'active' ? star_active : star_inactive} />))}
-                        </div>
+                        <Rating rating={logement.rating}/>
                     </div>
                   
                 </div>
                 <div className='logement_des'>
-                        <Dropdown data={{ title: 'Description', description: logement.description }} type='string' />
-                        <Dropdown data={{ title: 'Equipements', description: logement.equipments }} type='array' />
-                        </div>
+                    <Dropdown data={{ title: 'Description', description: logement.description }} type='string' />
+                    <Dropdown data={{ title: 'Equipements', description: logement.equipments }} type='array' />
+                </div> 
             </div >
     )
-}
+} 
 
 export default Logement
