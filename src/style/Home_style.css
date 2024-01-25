@@ -44,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     /* height temporaire*/
     padding: 50px 50px;
     border-radius: 25px;
@@ -52,13 +52,14 @@
     background-color: #F6F6F6;
     box-sizing: border-box;
 }
-.main-content a  {
+
+.main-content a {
     margin-bottom: 50px;
-   
+
 }
 
 .home_card {
-    
+
     position: relative;
     width: 340px;
     height: 340px;
@@ -84,10 +85,12 @@
         margin-top: 27px;
         padding: 0 20px;
     }
+
     .text-img {
         height: 111px;
         margin-bottom: 22px;
     }
+
     .title_home {
         font-size: 1.5em;
     }
@@ -98,16 +101,18 @@
         margin-bottom: 27px;
         gap: 0;
         background-color: #fff;
-        
+
     }
+
     .main-content a {
         width: 100%;
+        margin-bottom: 0;
     }
-    
+
     .home_card {
         flex: none;
         width: 100%;
-        margin-bottom:20px ;
+        margin-bottom: 20px;
         background-size: cover;
         flex: none;
     }
