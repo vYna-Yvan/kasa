@@ -24,7 +24,7 @@
     margin-bottom: 139px;
 }
 
-.error_box p {
+.linkHome {
     color: var(--main-color);
     font-style: normal;
     font-size: 1.125em;
@@ -37,15 +37,18 @@
     .error_box {
         padding: 0 20px;
     }
+
     .error {
         font-size: 6em;
         margin: 133px 0;
     }
+
     .error_box h2 {
-       font-size: 1.25em; 
-       margin-bottom: 133px;
-       text-align: center;
+        font-size: 1.25em;
+        margin-bottom: 133px;
+        text-align: center;
     }
+
     .error_box p {
         margin-bottom: 133px;
         text-align: center;

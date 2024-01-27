@@ -24,7 +24,6 @@ const Home = () => {
             </div>
           </Link>
         ))}
-        <div className="home_card"></div>
       </div>
     </div>
   );

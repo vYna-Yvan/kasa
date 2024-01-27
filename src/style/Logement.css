@@ -18,6 +18,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 .carousel_number {
@@ -140,6 +141,10 @@
     .logement_container {
         margin: 27px 0;
         padding: 0 20px;
+    }
+
+    .logement_img {
+        border-radius: 10px;
     }
 
     .logement_info_container {
