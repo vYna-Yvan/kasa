@@ -46,30 +46,38 @@
     font-size: 1.5em;
 
 }
+
 .arrow {
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .rotate {
+}
+
+.rotate {
     transform: rotate(180deg);
-  }
+}
+
 .DropContent {
     background-color: #F6F6F6;
     padding: 20px 20px 20px 20px;
     border-radius: 10px 10px 5px 5px;
 }
+
+.DropContent p,
+div {
+    color: var(--main-color);
+}
+
 .DropContent {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  .fade-in {
+}
+
+.fade-in {
     opacity: 1;
-  }
-  
-  .fade-out {
+}
+
+.fade-out {
     opacity: 0;
-  }
+}
 
 .arrow {
     height: auto;
@@ -77,7 +85,7 @@
 }
 
 @media screen and (max-width:767px) {
-    
+
     .about_container {
         padding: 0 20px;
     }
@@ -90,5 +98,5 @@
         padding: 0;
         margin-bottom: 20px;
     }
-    
+
 }
